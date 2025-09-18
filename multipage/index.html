@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Ramkumar – Developer Portfolio</title>
+        <meta name="description" content="Ramkumar's personal website. I build web apps, APIs, and tools that are efficient and user-friendly. Explore my projects and achievements.">
+        <link rel="canonical" href="https://ramrk.dev/">
+        <meta name="author" content="Ramkumar">
+        <meta name="robots" content="index,follow">
+
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://ramrk.dev/">
+        <meta property="og:title" content="Ramkumar – Developer Portfolio">
+        <meta property="og:description" content="I build web apps, APIs, and tools. Explore my projects and achievements.">
+        <meta property="og:image" content="https://ramrk.dev/images/ram.jpg">
+        <meta property="og:image:alt" content="Ramkumar profile image">
+        
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Ramkumar – Developer Portfolio">
+        <meta name="twitter:description" content="I build web apps, APIs, and tools. Explore my projects and achievements.">
+        <meta name="twitter:image" content="https://ramrk.dev/images/ram.jpg">
+        
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="styles.css">
+
+        <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Ramkumar",
+            "url": "https://ramrk.dev/",
+            "image": "https://ramrk.dev/images/ram.jpg",
+            "sameAs": [
+              "https://github.com/ram-rk-cmd",
+              "https://www.linkedin.com/in/ramkumar-r-0187052b4/"
+            ],
+            "jobTitle": "Software Developer",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "Knowledge Institute of Technology"
+            }
+          }
+        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NT603LFCT4"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NT603LFCT4');
+        </script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container header__container">
+                <a href="index.html" class="header__logo">
+                    <img class="header__logo-img" src="images/ram.jpg" alt="Ramkumar logo">
+                </a>
+                <nav class="navbar">
+                    <div class="navbar__links">
+                        <a href="index.html">Home</a>
+                        <a href="project.html">Projects</a>
+                        <a href="achievements.html">Achievements</a>
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </nav>
+                <div class="header__actions">
+                     <a href="resume/Ram-Resume.pdf" download class="btn btn--primary">
+                        <span>Resume</span>
+                        <i class='bx bx-download'></i>
+                    </a>
+                    <button id="themeToggle" class="btn btn--icon" aria-label="Toggle dark mode" title="Toggle theme">
+                        <i class='bx bx-moon'></i>
+                    </button>
+                    <button class="navbar__toggle" aria-label="Toggle Menu" aria-expanded="false">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+    
+        <main>
+            <section class="hero fade-in">
+                <div class="container hero__container">
+                    <div class="hero__content">
+                        <h1 class="hero__title">Hi, I'm Ramkumar</h1>
+                        <p class="hero__description">
+                            I build innovative and practical solutions—from web apps and APIs to assistive technologies. I thrive on turning complex ideas into functional, user-centric products and am always exploring new ways to push the boundaries of technology.
+                        </p>
+                        <div class="hero__links">
+                            <a href="https://github.com/ram-rk-cmd" target="_blank" class="hero__link">View GitHub</a>
+                            <a href="https://www.linkedin.com/in/ramkumar-r-0187052b4/" target="_blank" class="hero__link">Connect on LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container footer__container">
+                <p>&copy; <span id="currentYear"></span> Ramkumar. All rights reserved.</p>
+                <div class="footer__socials">
+                    <a href="https://github.com/ram-rk-cmd" target="_blank" aria-label="GitHub" class="footer__icon">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ramkumar-r-0187052b4/" target="_blank" aria-label="LinkedIn" class="footer__icon">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                     <a href="https://www.instagram.com/ramkumar2info/" target="_blank" aria-label="Instagram" class="footer__icon">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    
+        <script src="scripts.js"></script>
+    </body>
+</html>

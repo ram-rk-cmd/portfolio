@@ -1,123 +1,1141 @@
+
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Ramkumar – Developer Portfolio</title>
-        <meta name="description" content="Ramkumar's personal website. I build web apps, APIs, and tools that are efficient and user-friendly. Explore my projects and achievements.">
-        <link rel="canonical" href="https://ramrk.dev/">
-        <meta name="author" content="Ramkumar">
-        <meta name="robots" content="index,follow">
 
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://ramrk.dev/">
-        <meta property="og:title" content="Ramkumar – Developer Portfolio">
-        <meta property="og:description" content="I build web apps, APIs, and tools. Explore my projects and achievements.">
-        <meta property="og:image" content="https://ramrk.dev/images/ram.jpg">
-        <meta property="og:image:alt" content="Ramkumar profile image">
-        
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Ramkumar – Developer Portfolio">
-        <meta name="twitter:description" content="I build web apps, APIs, and tools. Explore my projects and achievements.">
-        <meta name="twitter:image" content="https://ramrk.dev/images/ram.jpg">
-        
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-        <meta name="theme-color" content="#ffffff">
-        <link rel="stylesheet" href="styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ramkumar – Developer Portfolio</title>
+    <meta name="description" content="Ramkumar's personal website. I build web apps, APIs, and tools that are efficient and user-friendly. Explore my projects and achievements.">
+    <link rel="canonical" href="https://ramrk.dev/">
+    <meta name="author" content="Ramkumar">
+    <meta name="robots" content="index,follow">
 
-        <script type="application/ld+json">
-          {
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ramrk.dev/">
+    <meta property="og:title" content="Ramkumar – Developer Portfolio">
+    <meta property="og:description" content="I build web apps, APIs, and tools. Explore my projects and achievements.">
+    <meta property="og:image" content="https://ramrk.dev/images/ram.jpg">
+    <meta property="og:image:alt" content="Ramkumar profile image">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ramkumar – Developer Portfolio">
+    <meta name="twitter:description" content="I build web apps, APIs, and tools. Explore my projects and achievements.">
+    <meta name="twitter:image" content="https://ramrk.dev/images/ram.jpg">
+
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="theme-color" content="#ffffff">
+
+    <script type="application/ld+json">
+        {
             "@context": "https://schema.org",
             "@type": "Person",
             "name": "Ramkumar",
             "url": "https://ramrk.dev/",
             "image": "https://ramrk.dev/images/ram.jpg",
             "sameAs": [
-              "https://github.com/ram-rk-cmd",
-              "https://www.linkedin.com/in/ramkumar-r-0187052b4/"
+                "https://github.com/ram-rk-cmd",
+                "https://www.linkedin.com/in/ramkumar-r-0187052b4/"
             ],
             "jobTitle": "Software Developer",
             "worksFor": {
                 "@type": "Organization",
                 "name": "Knowledge Institute of Technology"
             }
-          }
-        </script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NT603LFCT4"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-NT603LFCT4');
-        </script>
-    </head>
-    <body>
-        <header class="header">
-            <div class="container header__container">
-                <a href="index.html" class="header__logo">
-                    <img class="header__logo-img" src="images/ram.jpg" alt="Ramkumar logo">
+        }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NT603LFCT4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-NT603LFCT4');
+    </script>
+
+    <style>
+        /*
+        * =================================================================
+        * FONT IMPORTS
+        * =================================================================
+        */
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap");
+
+        /*
+        * =================================================================
+        * CSS VARIABLES
+        * =================================================================
+        */
+        :root {
+            --header-height: 5rem;
+
+            /* Colors */
+            --primary-color: #3b82f6;
+            --primary-color-dark: #2563eb;
+            --text-color: #334155;
+            --heading-color: #1e293b;
+            --bg-color: #f8fafc;
+            --surface-color: #ffffff;
+            --border-color: #e2e8f0;
+
+            /* NEW: Transparency Variables */
+            --header-bg: rgba(248, 250, 252, 0.75);
+            --surface-glass-bg: rgba(255, 255, 255, 0.6);
+            --surface-glass-border: rgba(226, 232, 240, 0.7);
+
+            /* Typography */
+            --body-font: "Inter", sans-serif;
+            --heading-font: "Poppins", sans-serif;
+            --h1-size: 2.5rem;
+            --h2-size: 1.75rem;
+            --h3-size: 1.25rem;
+            --normal-font-size: 1rem;
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-bold: 700;
+
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 0.75rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 3rem;
+
+            /* Effects */
+            --border-radius: 8px;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --transition-fast: all 0.2s ease-in-out;
+            --transition-medium: all 0.3s ease-in-out;
+        }
+
+        [data-theme="dark"] {
+            --text-color: #cbd5e1;
+            --heading-color: #f8fafc;
+            --bg-color: #0f172a;
+            --surface-color: #1e293b;
+            --border-color: #334155;
+            --primary-color: #60a5fa;
+            --primary-color-dark: #3b82f6;
+
+            /* NEW: Dark Theme Transparency Variables */
+            --header-bg: rgba(15, 23, 42, 0.75);
+            --surface-glass-bg: rgba(30, 41, 59, 0.6);
+            --surface-glass-border: rgba(51, 65, 85, 0.7);
+        }
+
+        /*
+        * =================================================================
+        * BASE STYLES
+        * =================================================================
+        */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--body-font);
+            font-size: var(--normal-font-size);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: var(--heading-font);
+            color: var(--heading-color);
+            font-weight: var(--font-weight-bold);
+            line-height: 1.3;
+            margin: var(--space-lg) 0 var(--space-sm);
+        }
+
+        h1 {
+            font-size: var(--h1-size);
+        }
+
+        h2 {
+            font-size: var(--h2-size);
+        }
+
+        h3 {
+            font-size: var(--h3-size);
+        }
+
+        p {
+            margin-bottom: var(--space-md);
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: var(--font-weight-medium);
+            transition: var(--transition-fast);
+        }
+
+        a:hover {
+            color: var(--primary-color-dark);
+            text-decoration: underline;
+        }
+
+        a[target=_blank]::after {
+            content: " ↗";
+            font-size: 0.8em;
+            display: inline-block;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /*
+        * =================================================================
+        * LAYOUT & UTILITIES
+        * =================================================================
+        */
+        .container {
+            max-width: 1024px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: var(--space-md);
+            padding-right: var(--space-md);
+        }
+
+        .page-content {
+            padding-top: var(--space-xl);
+            padding-bottom: var(--space-xl);
+        }
+
+        /* Scroll-triggered animation class */
+        .fade-in {
+            padding-top: var(--space-xl);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /*
+        * =================================================================
+        * HEADER & NAVIGATION
+        * =================================================================
+        */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: var(--header-bg);
+            /* UPDATED */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition-medium);
+        }
+
+        .header__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: var(--header-height);
+        }
+
+        .header__logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .navbar__links {
+            display: flex;
+            gap: var(--space-lg);
+        }
+
+        .navbar__links a {
+            color: var(--text-color);
+            font-weight: var(--font-weight-medium);
+        }
+
+        .navbar__links a:hover {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .header__actions {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .navbar__toggle {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 24px;
+            height: 24px;
+            position: relative;
+            padding: 0;
+        }
+
+        .navbar__toggle .bar {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: var(--heading-color);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            position: absolute;
+            left: 0;
+        }
+
+        .navbar__toggle .bar:nth-child(1) {
+            top: 0;
+        }
+
+        .navbar__toggle .bar:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .navbar__toggle .bar:nth-child(3) {
+            bottom: 0;
+        }
+
+        /*
+        * =================================================================
+        * BUTTONS
+        * =================================================================
+        */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-sm) var(--space-lg);
+            font-size: var(--normal-font-size);
+            font-weight: var(--font-weight-medium);
+            border-radius: var(--border-radius);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            text-decoration: none;
+        }
+
+        .btn--primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn--primary:hover {
+            background-color: var(--primary-color-dark);
+            color: white;
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        .btn--icon {
+            background-color: transparent;
+            color: var(--text-color);
+            padding: var(--space-sm);
+            font-size: 1.25rem;
+        }
+
+        .btn--icon:hover {
+            color: var(--primary-color);
+            background-color: var(--surface-color);
+            text-decoration: none;
+        }
+
+        /*
+        * =================================================================
+        * HERO SECTION
+        * =================================================================
+        */
+        .hero {
+            min-height: calc(100vh - var(--header-height));
+            display: flex;
+            align-items: center;
+        }
+
+        .hero__container {
+            padding: var(--space-xl) 0;
+        }
+
+        .hero__content {
+            max-width: 800px;
+        }
+
+        .hero__title {
+            font-size: 3rem;
+            margin-top: 0;
+        }
+
+        .hero__description {
+            font-size: 1.25rem;
+            color: var(--text-color);
+            margin-bottom: var(--space-xl);
+        }
+
+        .hero__links {
+            display: flex;
+            gap: var(--space-md);
+            align-items: center;
+        }
+
+        .hero__link {
+            font-weight: var(--font-weight-bold);
+        }
+
+        /*
+        * =================================================================
+        * CARDS
+        * =================================================================
+        */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .card {
+            background-color: var(--surface-glass-bg);
+            /* UPDATED */
+            border: 1px solid var(--surface-glass-border);
+            /* UPDATED */
+            backdrop-filter: blur(8px);
+            /* NEW */
+            -webkit-backdrop-filter: blur(8px);
+            /* NEW for Safari */
+            border-radius: var(--border-radius);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-medium);
+            position: relative;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-md);
+            z-index: 10;
+        }
+
+        .card__title {
+            margin-top: 0;
+        }
+
+        .card__title a {
+            color: var(--heading-color);
+            text-decoration: none;
+        }
+
+        .card__title a:hover {
+            color: var(--primary-color);
+        }
+
+        .card__subtitle {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            margin-top: calc(-1 * var(--space-sm) + 4px);
+            margin-bottom: var(--space-md);
+        }
+
+        /*
+        * =================================================================
+        * ABOUT PAGE
+        * =================================================================
+        */
+        .about-section {
+            margin-bottom: var(--space-xl);
+        }
+
+        .tech-stack__badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+        }
+
+        /*
+        * =================================================================
+        * CONTACT PAGE
+        * =================================================================
+        */
+        .contact-intro,
+        .contact-form-section {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-intro {
+            text-align: center;
+        }
+
+        .contact-subtext {
+            font-size: 1.125rem;
+            margin-bottom: var(--space-xl);
+        }
+
+        .contact-info p {
+            margin-bottom: var(--space-xs);
+        }
+
+        .contact-form-section {
+            margin-top: var(--space-xl);
+        }
+
+        .contact-form {
+            background-color: var(--surface-glass-bg);
+            /* UPDATED */
+            border: 1px solid var(--surface-glass-border);
+            /* UPDATED */
+            backdrop-filter: blur(8px);
+            /* NEW */
+            -webkit-backdrop-filter: blur(8px);
+            /* NEW for Safari */
+            padding: var(--space-xl);
+            border-radius: var(--border-radius);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: var(--font-weight-medium);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: var(--space-sm) var(--space-md);
+            font-size: var(--normal-font-size);
+            font-family: var(--body-font);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            background-color: var(--surface-color);
+            /* Kept solid for readability */
+            color: var(--text-color);
+            transition: var(--transition-fast);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+        }
+
+        /*
+        * =================================================================
+        * FOOTER
+        * =================================================================
+        */
+        .footer {
+            padding: var(--space-xl) 0;
+            border-top: 1px solid var(--border-color);
+            margin-top: var(--space-xl);
+        }
+
+        .footer__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+        }
+
+        .footer__socials {
+            display: flex;
+            gap: var(--space-md);
+        }
+
+        .footer__icon {
+            font-size: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .footer__icon:hover {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+
+        /*
+        * =================================================================
+        * RESPONSIVE DESIGN
+        * =================================================================
+        */
+        @media (max-width: 768px) {
+            :root {
+                --h1-size: 2rem;
+                --h2-size: 1.5rem;
+            }
+
+            .hero__title {
+                font-size: 2.5rem;
+            }
+
+            .hero__description {
+                font-size: 1.1rem;
+            }
+
+            .navbar__toggle {
+                display: block;
+                z-index: 1001;
+            }
+
+            .navbar__links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: min(75vw, 400px);
+                height: 100vh;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--surface-color);
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+                transition: right 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+                gap: var(--space-xl);
+                font-size: 1.25rem;
+            }
+
+            .navbar__links.active {
+                right: 0;
+            }
+
+            body.nav-open {
+                overflow: hidden;
+            }
+
+            .navbar__toggle.active .bar:nth-child(1) {
+                transform: translateY(11px) rotate(45deg);
+                /* Adjusted for center */
+            }
+
+            .navbar__toggle.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .navbar__toggle.active .bar:nth-child(3) {
+                transform: translateY(-11px) rotate(-45deg);
+                /* Adjusted for center */
+            }
+
+            .header__actions .btn--primary {
+                display: none;
+            }
+
+            .footer__container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /*
+        * =================================================================
+        * ACCORDION STYLES
+        * =================================================================
+        */
+        .accordion-container {
+            width: 100%;
+            margin-top: var(--space-xl);
+        }
+
+        .accordion-item {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            margin-bottom: var(--space-md);
+            transition: var(--transition-medium);
+        }
+
+        .accordion-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .accordion-button {
+            width: 100%;
+            padding: var(--space-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .accordion-title {
+            font-family: var(--heading-font);
+            font-size: var(--h3-size);
+            color: var(--heading-color);
+            font-weight: var(--font-weight-bold);
+        }
+
+        .accordion-icon {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+            /* Adjust if content is taller */
+            transition: max-height 0.5s ease-in;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(45deg);
+        }
+
+        .accordion-body {
+            padding: 0 var(--space-lg) var(--space-lg) var(--space-lg);
+            display: flex;
+            gap: var(--space-xl);
+            flex-wrap: wrap;
+        }
+
+        .accordion-image {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .accordion-image img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            object-fit: cover;
+        }
+
+        .accordion-text {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .accordion-subtitle {
+            font-weight: bold;
+            color: var(--text-color);
+            margin-top: 0;
+        }
+
+        .accordion-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xs);
+            margin-top: var(--space-lg);
+            margin-bottom: var(--space-lg);
+        }
+
+        .accordion-features span {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.85rem;
+        }
+
+        .btn--secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn--secondary:hover {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="#home" class="header__logo">
+                <img class="header__logo-img" src="images/ram.jpg" alt="Ramkumar logo">
+            </a>
+            <nav class="navbar">
+                <div class="navbar__links">
+                    <a href="#home">Home</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#achievements">Achievements</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+            <div class="header__actions">
+                <a href="resume/Ram-Resume.pdf" download class="btn btn--primary">
+                    <span>Resume</span>
+                    <i class='bx bx-download'></i>
                 </a>
-                <nav class="navbar">
-                    <div class="navbar__links">
-                        <a href="index.html">Home</a>
-                        <a href="project.html">Projects</a>
-                        <a href="achievements.html">Achievements</a>
-                        <a href="about.html">About</a>
-                        <a href="contact.html">Contact</a>
+                <button id="themeToggle" class="btn btn--icon" aria-label="Toggle dark mode" title="Toggle theme">
+                    <i class='bx bx-moon'></i>
+                </button>
+                <button class="navbar__toggle" aria-label="Toggle Menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section id="home" class="hero fade-in">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Hi, I'm Ramkumar</h1>
+                    <p class="hero__description">
+                        I build innovative and practical solutions—from web apps and APIs to assistive technologies. I thrive on turning complex ideas into functional, user-centric products and am always exploring new ways to push the boundaries of technology.
+                    </p>
+                    <div class="hero__links">
+                        <a href="https://github.com/ram-rk-cmd" target="_blank" class="hero__link">View GitHub</a>
+                        <a href="https://www.linkedin.com/in/ramkumar-r-0187052b4/" target="_blank" class="hero__link">Connect on LinkedIn</a>
                     </div>
-                </nav>
-                <div class="header__actions">
-                     <a href="resume/Ram-Resume.pdf" download class="btn btn--primary">
-                        <span>Resume</span>
-                        <i class='bx bx-download'></i>
-                    </a>
-                    <button id="themeToggle" class="btn btn--icon" aria-label="Toggle dark mode" title="Toggle theme">
-                        <i class='bx bx-moon'></i>
-                    </button>
-                    <button class="navbar__toggle" aria-label="Toggle Menu" aria-expanded="false">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </button>
                 </div>
             </div>
-        </header>
+        </section>
 
-    
-        <main>
-            <section class="hero fade-in">
-                <div class="container hero__container">
-                    <div class="hero__content">
-                        <h1 class="hero__title">Hi, I'm Ramkumar</h1>
-                        <p class="hero__description">
-                            I build innovative and practical solutions—from web apps and APIs to assistive technologies. I thrive on turning complex ideas into functional, user-centric products and am always exploring new ways to push the boundaries of technology.
-                        </p>
-                        <div class="hero__links">
-                            <a href="https://github.com/ram-rk-cmd" target="_blank" class="hero__link">View GitHub</a>
-                            <a href="https://www.linkedin.com/in/ramkumar-r-0187052b4/" target="_blank" class="hero__link">Connect on LinkedIn</a>
+        <section id="projects" class="container page-content">
+            <h1 class="fade-in">Projects</h1>
+            <div id="projects-accordion-container" class="accordion-container fade-in"></div>
+        </section><br><br><br><br><br><br>
+
+        <section id="achievements" class="container page-content">
+            <h1 class="fade-in">Achievements</h1>
+            <div id="achievements-accordion-container" class="accordion-container fade-in"></div>
+        </section>
+
+        <section id="about" class="container page-content">
+            <div class="about-section fade-in">
+                <h1>About Me</h1>
+                <p>I'm currently pursuing my B.Tech in Information Technology at the <a href="https://kiot.ac.in/" target="_blank">Knowledge Institute of Technology</a>. My passion lies at the intersection of software development, AI/ML, and IoT, where I focus on building innovative tech solutions to solve real-world problems.</p>
+                <p>Through academic projects and personal exploration, I have gained hands-on experience with HTML, CSS, JavaScript, Python, and machine learning frameworks. I am a lifelong learner, always eager to master new tools that can enhance my skills and create impactful technology.</p>
+            </div>
+
+            <div class="about-section fade-in">
+                <h2>What I’m Building Now</h2>
+                <p>My current focus is on developing <strong>LLM-based bots</strong> designed to operate in offline environments, providing intelligent assistance where connectivity is limited. I'm also creating <strong>assistive technologies</strong> for individuals who are blind, deaf, or unable to speak, aiming to improve accessibility and independence through AI and user-centric design.</p>
+            </div>
+
+            <div class="about-section fade-in">
+                <h2>🚀 Goals & Vision</h2>
+                <p>In the next few years, I aim to build developer-first tools that simplify complex workflows. I am drawn to solving challenges in developer tooling, automation, and performance optimization, where small improvements can create a massive impact. My ultimate goal is to make life simpler and more beautiful through technology.</p>
+            </div>
+
+            <div class="about-section fade-in">
+                <h2>🧠 What I'm Learning Now</h2>
+                <p>I am currently diving deep into <strong>full-stack development</strong>, sharpening my skills in both frontend and backend technologies. I am focused on building complete, scalable, and user-friendly web applications, from responsive UIs to robust APIs.</p>
+            </div>
+
+            <div class="about-section fade-in">
+                <h2>💻 Tech Stack</h2>
+                <div class="tech-stack__badges">
+                    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+                    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+                    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+                    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+                    <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
+                    <img src="https://img.shields.io/badge/LLMs-AI%20Models-blueviolet?style=for-the-badge&logo=OpenAI&logoColor=white" alt="Large Language Models">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container page-content">
+            <div class="contact-intro fade-in">
+                <h1>Let’s Talk</h1>
+                <p class="contact-subtext">I’m open to collaborating on interesting projects. You can connect with me through the following channels or fill out the form below.</p>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:ramkumar2info@gmail.com">ramkumar2info@gmail.com</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ramkumar-r-0187052b4/" target="_blank">linkedin.com/in/ramkumar-r-0187052b4</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/ram-rk-cmd" target="_blank">github.com/ram-rk-cmd</a></p>
+                </div>
+            </div>
+
+            <div class="contact-form-section fade-in">
+                <h2>Send a Message</h2>
+                <form action="https://formspree.io/f/xdkgbyyq" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" name="email" id="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea name="message" id="message" rows="6" placeholder="Let’s build something great..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <p>&copy; <span id="currentYear"></span> Ramkumar. All rights reserved.</p>
+            <div class="footer__socials">
+                <a href="https://github.com/ram-rk-cmd" target="_blank" aria-label="GitHub" class="footer__icon">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ramkumar-r-0187052b4/" target="_blank" aria-label="LinkedIn" class="footer__icon">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="https://www.instagram.com/ramkumar2info/" target="_blank" aria-label="Instagram" class="footer__icon">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- DATA SCRIPT (from data.js) ---
+        (function() {
+            "use strict";
+
+            const projects = [{
+                title: "Sign to Text",
+                description: "An assistive application that translates sign language gestures into real-time text, helping bridge communication between deaf individuals and non-signers.",
+                imageUrl: "images/signtotext.jpg",
+                features: ["Real-time Translation", "High Accuracy Model", "Accessible UI", "OpenCV"],
+                link: "https://github.com/ram-rk-cmd/sign_to_text"
+            }, {
+                title: "Audio to Braille",
+                description: "A specialized tool that converts spoken audio into Braille output, empowering visually impaired users to access auditory content through tactile feedback.",
+                imageUrl: "images/audiotobraille.png",
+                features: ["Speech-to-Text API", "Braille Conversion Algorithm", "Multi-language Support", "Real-time Output"],
+                link: "#"
+            }, {
+                title: "Hospital Management",
+                description: "A platform for locating hospitals, viewing bed availability, and connecting with doctors. Designed to streamline emergency response and support informed healthcare choices.",
+                imageUrl: "images/hospitalmanagement.png",
+                features: ["Real-time Database", "Geolocation Search", "Doctor Specialty Filter", "User-friendly Interface"],
+                link: "https://github.com/ram-rk-cmd/hosptial"
+            }, {
+                title: "AskyourPDF",
+                description: "An intelligent bot that answers questions based on the content of uploaded PDFs. It leverages NLP models to provide accurate, context-aware responses from complex documents.",
+                imageUrl: "images/askyoutPDF.png",
+                features: ["NLP Integration", "Document Parsing", "Context-aware AI", "Streamlit UI"],
+                link: "https://github.com/ram-rk-cmd/AskyourPDF"
+            }, ];
+
+            const achievements = [{
+                title: "Codewar 1.0 – Winner",
+                subtitle: "PARK Engineering College",
+                description: "Won 1st place and a ₹10,000 cash prize at Codewar 1.0, a coding competition hosted by PARK Engineering College. Demonstrated fast problem-solving and strong programming skills in a competitive environment.",
+                imageUrl: "images/RAMKUMAR CODEWAR.jpg",
+                features: ["Competitive Programming", "Team Collaboration", "Algorithm Design", "Problem Solving"],
+                link: "https://drive.google.com/file/d/12Fo-LN3sns0jg4IDluAJgpjpB1XU873j/view?usp=sharing"
+            }, {
+                title: "Research Publication – Blockchain Voting Systems",
+                subtitle: "ICCES 2024 Conference",
+                description: "Co-authored and presented a research paper on secure voting systems using blockchain technology at the 9th International Conference on Communication and Electronics Systems (ICCES 2024).",
+                imageUrl: "images/IEEE RK.png",
+                features: ["Blockchain Technology", "Ethereum Smart Contracts", "Cryptography", "Academic Research"],
+                link: "https://drive.google.com/file/d/1-rVNouQeo9lApiBNcaPy9cCC8Y8kByrt/view?usp=sharing"
+            }, {
+                title: "Python Zero to Hero",
+                subtitle: "GUVI Geek Networks",
+                description: "Successfully completed the comprehensive 'Python Zero to Hero' course, covering fundamental to advanced concepts in Python programming. Certificate issued on October 24, 2023.",
+                imageUrl: "images/GuviCertification.png",
+                features: ["Core Python Concepts", "Data Structures", "Object-Oriented Programming", "Problem Solving"],
+                link: "https://drive.google.com/file/d/1KebUqVdDlxx4qsmkD23VlIGG-qnsT-sQ/view?usp=sharing"
+            }, {
+                title: "Generative AI for All",
+                subtitle: "Infosys Springboard",
+                description: "Completed the 'Generative AI for All' course offered by Infosys, gaining foundational knowledge in generative artificial intelligence concepts and applications. Course completed on January 30, 2025.",
+                imageUrl: "images/GEN AI.jpg",
+                features: ["Generative AI Fundamentals", "Large Language Models", "AI Applications", "Infosys Springboard"],
+                link: "https://drive.google.com/file/d/1-78IFfqMn6RU06G9rvoXhWnyUzj2Z4Lb/view?usp=sharing"
+            }, {
+                title: "NPTEL Certification – Industry 4.0 & IIoT",
+                subtitle: "NPTEL",
+                description: "Completed the 12-week NPTEL course on “Introduction to Industry 4.0 and Industrial Internet of Things,” scoring 72/100 and gaining advanced insights into smart systems and automation.",
+                imageUrl: "images/Introduction to Industry 4.0 and Industrial Internet of Things.jpg",
+                features: ["Industry 4.0 Concepts", "IoT Architecture", "Smart Systems", "Automation Technologies"],
+                link: "https://drive.google.com/file/d/1mPvGv_g3GegRSgxUTpjTPHnglZpuZLrL/view?usp=sharing"
+            }, {
+                title: "NPTEL Certification – Cloud Computing",
+                subtitle: "NPTEL / IIT Kharagpur",
+                description: "Successfully completed a 12-week NPTEL course on Cloud Computing, achieving a consolidated score of 65%. Gained in-depth knowledge of cloud architecture, services (IaaS, PaaS, SaaS), virtualization, and security principles.",
+                imageUrl: "images/cloudcomputing.jpg",
+                features: ["Cloud Architecture", "Virtualization", "Cloud Services (IaaS, PaaS, SaaS)", "Cloud Security"],
+                link: "https://drive.google.com/file/d/1-u1NFdEZJyTPchoj4qJzW5VcXAZHyQo2/view?usp=sharing"
+            }];
+
+            function createAccordionItem(item, index) {
+                return `
+                    <div class="accordion-item">
+                        <button class="accordion-button" aria-expanded="${index === 0 ? 'true' : 'false'}">
+                            <span class="accordion-title">${item.title}</span>
+                            <i class='bx bx-plus accordion-icon'></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <div class="accordion-image">
+                                    <img src="${item.imageUrl}" alt="${item.title}">
+                                </div>
+                                <div class="accordion-text">
+                                    ${item.subtitle ? `<p class="accordion-subtitle">${item.subtitle}</p>` : ''}
+                                    <p>${item.description}</p>
+                                    <div class="accordion-features">
+                                        ${item.features.map(feature => `<span>${feature}</span>`).join('')}
+                                    </div>
+                                    ${item.link && item.link !== '#' ? `<a href="${item.link}" target="_blank" class="btn btn--secondary">Learn More</a>` : ''}
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </main>
+                `;
+            }
 
-        <footer class="footer">
-            <div class="container footer__container">
-                <p>&copy; <span id="currentYear"></span> Ramkumar. All rights reserved.</p>
-                <div class="footer__socials">
-                    <a href="https://github.com/ram-rk-cmd" target="_blank" aria-label="GitHub" class="footer__icon">
-                        <i class='bx bxl-github'></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/ramkumar-r-0187052b4/" target="_blank" aria-label="LinkedIn" class="footer__icon">
-                        <i class='bx bxl-linkedin'></i>
-                    </a>
-                     <a href="https://www.instagram.com/ramkumar2info/" target="_blank" aria-label="Instagram" class="footer__icon">
-                        <i class='bx bxl-instagram'></i>
-                    </a>
-                </div>
-            </div>
-        </footer>
-    
-        <script src="scripts.js"></script>
-    </body>
+            function renderAccordion(containerId, data) {
+                const container = document.getElementById(containerId);
+                if (container) {
+                    container.innerHTML = data.map(createAccordionItem).join('');
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                renderAccordion("projects-accordion-container", projects);
+                renderAccordion("achievements-accordion-container", achievements);
+
+                const accordionItems = document.querySelectorAll('.accordion-item');
+
+                if (accordionItems.length > 0) {
+                    // Open the first item by default
+                    accordionItems[0].classList.add('active');
+
+                    accordionItems.forEach(item => {
+                        const button = item.querySelector('.accordion-button');
+                        button.addEventListener('click', () => {
+                            const isActive = item.classList.contains('active');
+                            accordionItems.forEach(otherItem => {
+                                otherItem.classList.remove('active');
+                            });
+                            if (!isActive) {
+                                item.classList.add('active');
+                            }
+                        });
+                    });
+                }
+            });
+        })();
+
+        // --- MAIN SCRIPT (from scripts.js) ---
+        (function() {
+            "use strict";
+
+            const menuToggle = document.querySelector(".navbar__toggle");
+            const navLinks = document.querySelector(".navbar__links");
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener("click", () => {
+                    navLinks.classList.toggle("active");
+                    menuToggle.classList.toggle("active");
+                    document.body.classList.toggle("nav-open");
+                    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+                    menuToggle.setAttribute("aria-expanded", !isExpanded);
+                });
+            }
+
+            const themeToggleBtn = document.getElementById("themeToggle");
+            const moonIcon = "<i class='bx bx-moon'></i>";
+            const sunIcon = "<i class='bx bx-sun'></i>";
+
+            const applyTheme = (theme) => {
+                if (theme === "dark") {
+                    document.documentElement.setAttribute("data-theme", "dark");
+                    if (themeToggleBtn) themeToggleBtn.innerHTML = sunIcon;
+                } else {
+                    document.documentElement.removeAttribute("data-theme");
+                    if (themeToggleBtn) themeToggleBtn.innerHTML = moonIcon;
+                }
+            };
+
+            try {
+                const storedTheme = localStorage.getItem("theme");
+                const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                if (storedTheme) {
+                    applyTheme(storedTheme);
+                } else if (prefersDark) {
+                    applyTheme("dark");
+                } else {
+                    applyTheme("light");
+                }
+            } catch (err) {
+                console.error("Could not access localStorage:", err);
+                applyTheme("light");
+            }
+
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener("click", () => {
+                    const isDark = document.documentElement.hasAttribute("data-theme");
+                    const newTheme = isDark ? "light" : "dark";
+                    applyTheme(newTheme);
+                    try {
+                        localStorage.setItem("theme", newTheme);
+                    } catch (err) {
+                        console.error("Could not save theme to localStorage:", err);
+                    }
+                });
+            }
+
+            const yearEl = document.getElementById("currentYear");
+            if (yearEl) {
+                yearEl.textContent = new Date().getFullYear();
+            }
+
+            const faders = document.querySelectorAll(".fade-in");
+            const appearOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add("active");
+                        appearOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+        })();
+    </script>
+</body>
+
 </html>
